@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+main {
+  margin-top: 0.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: var(--paragraph-color);
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.-card {
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.-card:has(.pf-card-background-image) {
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.pf-card-background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.pf-button {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.25rem;
+  background-color: transparent;
+  color: var(--paragraph-color);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  transition: all 0.25s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.pf-button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--card-background-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pf-button.active {
+  background-color: var(--primary-color);
+  color: var(--card-background-color);
+}
+
+.pf-availability {
+  color: var(--card-background-color);
+  background-color: var(--tertiary-color);
+  border-radius: 25px;
+  width: max-content;
+  padding: 0.25rem 0.75rem;
+  font-weight: 500;
 }

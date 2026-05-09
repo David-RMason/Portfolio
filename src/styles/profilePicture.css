@@ -1,0 +1,11 @@
+.pf-profile-picture-container {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  border: 3px solid var(--tertiary-color);
+  overflow: hidden;
+}
+
+.pf-profile-picture-image {
+  height: 100%;
+}
