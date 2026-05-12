@@ -1,0 +1,49 @@
+.pf-cv-container {
+  max-width: 900px;
+}
+
+.pf-cv-intro-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pf-professional-experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pf-job-container {
+  border-left: 0.5rem solid var(--primary-color);
+  padding-left: 0.5rem;
+  margin-left: -0.5rem;
+
+  @media screen and (min-width: 587px) {
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+}
+
+.pf-job-container:nth-child(2n + 1) {
+  border-color: var(--tertiary-color);
+}
+
+.pf-job-container:nth-child(3n + 1) {
+  border-color: var(--accent);
+}
+
+.pf-job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.pf-education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

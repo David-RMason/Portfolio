@@ -2,8 +2,11 @@
   height: 10rem;
   width: 10rem;
   border-radius: 50%;
+  border-bottom-left-radius: 0;
   border: 3px solid var(--tertiary-color);
+  background-color: var(--card-background-color);
   overflow: hidden;
+  margin-bottom: 0.5rem;
 }
 
 .pf-profile-picture-image {

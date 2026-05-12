@@ -1,0 +1,65 @@
+.pf-about-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "image" "about" "values";
+
+  @media screen and (min-width: 587px) {
+    grid-template-areas: "about image" "values values";
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.pf-about-me {
+  grid-area: about;
+  align-content: center;
+}
+
+.pf-about-image.-card {
+  grid-area: image;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.pf-about-image img {
+  object-fit: cover;
+  object-position: top;
+  min-height: 100%;
+  max-height: 25rem;
+  min-width: 100%;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+.pf-about-values {
+  grid-area: values;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media screen and (min-width: 769px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pf-about-value {
+  display: grid;
+  gap: 0.5rem;
+
+  @media screen and (min-width: 587px) {
+    grid-template-columns: 25% auto;
+  }
+}
+
+.pf-about-value svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
+  color: var(--header-color);
+}
+
+.pf-about-value h3 {
+  font-size: 1.2rem;
+}

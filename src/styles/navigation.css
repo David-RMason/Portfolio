@@ -1,11 +1,5 @@
 .pf-nav-container {
-  display: flex;
-  flex-direction: column;
   position: relative;
-}
-
-.pf-nav-container:has(.-open) {
-  gap: 1rem;
 }
 
 .pf-mobile-nav {
@@ -29,42 +23,43 @@
 
 .pf-hamburger {
   display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: none;
   font-size: 1.5rem;
   color: var(--paragraph-color);
+  cursor: pointer;
 }
 
-.pf-nav-links {
+.pf-mobile-links {
   position: absolute;
-  z-index: 1;
+  left: -0.5px;
+  right: -0.5px;
+  z-index: 20;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  gap: 0.5rem 1rem;
-  top: 80%;
-  right: -0.5px;
-  left: -0.5px;
-  background-color: var(--card-background-color);
+  gap: 0.5rem;
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border);
+  border-top: none;
   border-bottom-right-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
-  border: 1px solid var(--border);
-  border-top: 0px;
-  padding: 0.5rem 1rem;
+  box-shadow: 0 25px 15px 0 var(--border);
 }
 
-@media screen and (min-width: 769px) {
-  .pf-mobile-nav {
+.pf-desktop-links {
+  display: none;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 587px) {
+  .pf-mobile-wrapper {
     display: none;
   }
-
-  .pf-nav-links {
-    height: auto !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    position: relative;
-    padding: 0;
-    flex-direction: row;
-    border: none;
+  .pf-desktop-links {
+    display: flex;
   }
 }

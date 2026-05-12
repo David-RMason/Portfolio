@@ -1,9 +1,11 @@
 :root {
-  --primary-color: #c17a4f;
+  --primary-color: #a26139;
   --secondary-color: #e8dfd4;
-  --tertiary-color: #7ba882;
+  --tertiary-color: #537f56;
   --accent: #f3ffca;
-  --paragraph-color: #2d2530;
+  --header-color: #775845;
+  --header-color_old: #2d2520;
+  --paragraph-color: #7a6f65;
   --background-color: #faf8f5;
   --card-background-color: #fefdfb;
   --border: #8b6f4726;
@@ -15,9 +17,41 @@ body {
   font-family:
     ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    margin: 2rem;
+  }
 }
 
 code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--header-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p,
+li,
+span {
+  color: var(--paragraph-color);
+  letter-spacing: 0.02rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }

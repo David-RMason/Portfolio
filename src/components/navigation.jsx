@@ -6,59 +6,83 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { routes } from "../data/routes";
 import "../styles/navigation.css";
 
+function NavigationLinks({ onNavigate }) {
+  return routes.map(({ path, label, icon: Icon }) => (
+    <NavLink key={path} className="pf-button" to={path} onClick={onNavigate}>
+      <Icon aria-hidden="true" focusable="false" />
+      {label}
+    </NavLink>
+  ));
+}
+
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const location = useLocation();
 
   const currentRoute = routes.find((route) => route.path === location.pathname);
 
-  return (
-    <nav className="pf-nav-container -card">
-      <div className="pf-mobile-nav">
-        {currentRoute && (
-          <span className="pf-current-page">
-            <currentRoute.icon />
-            {currentRoute.label}
-          </span>
-        )}
+  function toggleMenu() {
+    setMenuOpen((prev) => !prev);
+  }
 
-        <button
-          className="pf-hamburger"
-          onClick={toggleMenu}
-          aria-expanded={menuOpen}
-          aria-controls="pf-mobile-menu"
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
+  return (
+    <nav className="pf-nav-container -card" aria-label="Primary">
+      {/* Mobile nav */}
+      <div className="pf-mobile-wrapper">
+        <div className="pf-mobile-nav">
+          {currentRoute && (
+            <span className="pf-current-page">
+              <currentRoute.icon aria-hidden="true" focusable="false" />
+              {currentRoute.label}
+            </span>
+          )}
+
+          <button
+            type="button"
+            className="pf-hamburger"
+            onClick={toggleMenu}
+            aria-expanded={menuOpen}
+            aria-controls="pf-mobile-menu"
+            aria-label={
+              menuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+          >
+            {menuOpen ? (
+              <FaTimes aria-hidden="true" />
+            ) : (
+              <FaBars aria-hidden="true" />
+            )}
+          </button>
+        </div>
+
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              id="pf-mobile-menu"
+              className="pf-mobile-links"
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{
+                duration: 0.2,
+                ease: "easeOut",
+              }}
+            >
+              <NavigationLinks onNavigate={closeMenu} />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
-      <AnimatePresence>
-        <motion.div
-          className="pf-nav-links"
-          aria-hidden={!menuOpen}
-          initial={false}
-          animate={{
-            height: menuOpen ? "auto" : 0,
-            opacity: menuOpen ? 1 : 0,
-            pointerEvents: menuOpen ? "auto" : "none",
-          }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
-        >
-          {routes.map(({ path, label, icon: Icon }) => (
-            <NavLink
-              key={path}
-              className="pf-button"
-              to={path}
-              onClick={() => setMenuOpen(false)}
-            >
-              <Icon />
-              {label}
-            </NavLink>
-          ))}
-        </motion.div>
-      </AnimatePresence>
+      {/* Desktop nav */}
+      <div className="pf-desktop-links">
+        <NavigationLinks />
+      </div>
     </nav>
   );
 }
