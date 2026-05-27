@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Card from "./shared/card";
 
 import "../styles/project.css";
+import "../styles/techStackLists.css";
 
 export default function Project({ name, image, description, techStack, link }) {
   return (

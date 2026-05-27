@@ -1,11 +1,12 @@
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Card from "../components/shared/card";
 import PageTransition from "../components/shared/pageTransition";
+import ContactCard from "../components/shared/contact.jsx";
 
 import "../styles/home.css";
 
 import ProfilePicture from "../components/profilePicture";
 import BackgroundImage from "../assets/backgroundImage.webp";
+import { homepageInfo } from "../data/homeData.js";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
           className="pf-card-background-image"
           alt=""
         />
-        <div className=".pf-intro-blur" />
+        <div className="pf-intro-blur" />
         <div className="pf-intro-content">
           <div className="pf-intro-top">
             <ProfilePicture />
@@ -24,47 +25,31 @@ export default function Home() {
           </div>
           <div className="pf-intro-about-me">
             <h2>Hi! I'm David</h2>
-            <p>
-              I’m a Birmingham-based web developer with experience building
-              custom WordPress websites and React applications for businesses
-              and clients. I’m passionate about creating accessible,
-              high-performing web experiences with clean code, responsive
-              design, and a strong attention to detail.
-            </p>
+            <h3>{homepageInfo.headline}</h3>
+            <p>{homepageInfo.summary}</p>
           </div>
         </div>
       </Card>
-      <Card as="section" className="pf-contact-links">
-        <h2>Connect with me</h2>
-        <a className="pf-contact-link" href="https://github.com/David-RMason">
-          <FaGithub />
-          Github
-        </a>
-        <a
-          className="pf-contact-link"
-          href="https://www.linkedin.com/in/david-r-mason/"
-        >
-          <FaLinkedin />
-          LinkedIn
-        </a>
-        <a className="pf-contact-link" href="mailto:masondr@hotmail.co.uk">
-          <FaEnvelope />
-          Email
-        </a>
-      </Card>
       <Card as="section" className="pf-tech-stack-container">
-        <h2>Languages & Frameworks/Libraries</h2>
-        <ul className="pf-tech-stack-list">
-          <li className="pf-tech-stack-item">JavaScript (ES6+)</li>
-          <li className="pf-tech-stack-item">TypeScript</li>
-          <li className="pf-tech-stack-item">HTML5</li>
-          <li className="pf-tech-stack-item">CSS3</li>
-          <li className="pf-tech-stack-item">Sass</li>
-          <li className="pf-tech-stack-item">React</li>
-          <li className="pf-tech-stack-item">Next.js (Learning)</li>
-          <li className="pf-tech-stack-item">Bootstrap</li>
-        </ul>
+        <h2>Tech Stack</h2>
+
+        <div className="pf-tech-stack-content">
+          {homepageInfo.techStack.map((category) => (
+            <div key={category.title} className="pf-tech-category">
+              <h3>{category.title}</h3>
+
+              <ul className="pf-home-tech-stack-list">
+                {category.items.map((item) => (
+                  <li key={item} className="pf-home-tech-stack-item">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </Card>
+      <ContactCard />
     </PageTransition>
   );
 }

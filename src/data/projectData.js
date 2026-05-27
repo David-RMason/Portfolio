@@ -1,13 +1,20 @@
 import insertCoinImage from "../assets/insertCoinPreview.webp";
 import bankistAppImage from "../assets/bankistAppPreview.webp";
+import feedbackAppImage from "../assets/feedbackAppPreview.webp";
 
 export const projects = [
   {
     name: "Insert Coin",
     image: insertCoinImage,
     description:
-      "A React TypeScript-based game library featuring a collection on classic mini-games, hosted on Vercel",
-    techStack: ["HTML", "CSS", "React", "TypeScript", "Vercel"],
+      "A React-based mini-game platform featuring serverless backend functionality, persistent cloud storage with Vercel KV, and interactive multi-page gameplay.",
+    techStack: [
+      "React",
+      "TypeScript",
+      "React Router",
+      "Vercel KV",
+      "Serverless Functions",
+    ],
     link: "https://insert-coin-three.vercel.app",
     featured: true,
   },
@@ -15,18 +22,25 @@ export const projects = [
     name: "Bankist App",
     image: bankistAppImage,
     description:
-      "A React TypeScript-based game library featuring a collection on classic mini-games, hosted on Vercel",
+      "A simple JavaScript project showing DOM manipulation and sleek design.",
     techStack: ["HTML", "CSS", "JavaScript"],
     link: "https://david-rmason.github.io/Bankist-App-Homepage/",
     featured: true,
   },
   {
-    name: "Insert Coin",
-    image: insertCoinImage,
+    name: "Feedback App",
+    image: feedbackAppImage,
     description:
-      "A React TypeScript-based game library featuring a collection on classic mini-games, hosted on Vercel",
-    techStack: ["HTML", "CSS", "React", "TypeScript", "Vercel"],
-    link: "https://insert-coin-three.vercel.app",
+      "“A React feedback management app with CRUD operations, Context API state management, and REST API integration.",
+    techStack: [
+      "React",
+      "JavaScript",
+      "Context API",
+      "React Router",
+      "Framer Motion",
+      "REST API",
+    ],
+    link: "https://github.com/David-RMason/feedback-app",
     featured: true,
   },
 ];

@@ -4,10 +4,14 @@ export default function Button({
   href,
   download,
   children,
+  target = "_blank",
+  rel = "noopener noreferer",
 }) {
   const Component = href ? "a" : "button";
 
-  const props = href ? { href, download } : { onClick, type: "button" };
+  const props = href
+    ? { href, download, rel, target }
+    : { onClick, type: "button" };
 
   return (
     <Component {...props} className={`${className} pf-button`}>

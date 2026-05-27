@@ -3,6 +3,7 @@ main {
   gap: 1rem;
   margin: 1rem auto;
   transition: margin 0.5s ease-in-out;
+  justify-content: center;
 }
 
 @media screen and (min-width: 587px) {
@@ -59,6 +60,7 @@ a {
   padding: 0.5rem 1rem;
   transition: all 0.25s ease-in-out;
   height: min-content;
+  width: max-content;
 }
 
 .pf-button:hover {

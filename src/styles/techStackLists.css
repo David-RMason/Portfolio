@@ -1,0 +1,18 @@
+.pf-tech-stack-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.pf-tech-stack-item {
+  border: 1px solid var(--primary-color);
+  border-radius: 25px;
+  padding: 0.25rem 0.75rem;
+  cursor: default;
+  color: var(--paragraph-color);
+  font-weight: 600;
+  background-color: var(--card-background-color);
+}

@@ -1,0 +1,20 @@
+.pf-contact-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.pf-contact-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  grid-area: connect;
+}
+
+a.pf-contact-link {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: max-content;
+}

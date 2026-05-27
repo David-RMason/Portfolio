@@ -7,6 +7,16 @@
   }
 }
 
+.pf-projects-group-container > :first-child {
+  grid-column: 1 / -1;
+}
+
+.pf-projects-group-container > :first-child .pf-project-image {
+  max-height: 350px;
+  object-fit: cover;
+  object-position: top;
+}
+
 .pf-project-container.-card {
   padding: 0;
   overflow: hidden;

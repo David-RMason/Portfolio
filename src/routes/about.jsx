@@ -4,6 +4,7 @@ import profileImage from "../assets/DavidMason.webp";
 
 import { coreProficiencies } from "../data/aboutData";
 import "../styles/about.css";
+import ContactCard from "../components/shared/contact";
 
 export default function About() {
   return (
@@ -48,6 +49,7 @@ export default function About() {
           </Card>
         ))}
       </section>
+      <ContactCard />
     </PageTransition>
   );
 }

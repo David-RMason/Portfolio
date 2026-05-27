@@ -1,10 +1,10 @@
 .pf-about-container {
   display: grid;
   gap: 1rem;
-  grid-template-areas: "image" "about" "values";
+  grid-template-areas: "image" "about" "values" "connect";
 
   @media screen and (min-width: 587px) {
-    grid-template-areas: "about image" "values values";
+    grid-template-areas: "about image" "values values" "connect connect";
     grid-template-columns: 2fr 1fr;
   }
 }
