@@ -40,39 +40,38 @@ export default function Projects() {
       {activity && (
         <Card as="section" className="pf-projects-activity-wrapper">
           <h2>Recent Activity</h2>
-          <GitHubCalendar
-            username="david-rmason"
-            hideTotalCount
-            theme={{
-              light: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
-              dark: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
-            }}
-            transformData={(contributions) => {
-              const threeMonthsAgo = new Date();
+          <div className="pf-projects-activity-content">
+            <GitHubCalendar
+              username="david-rmason"
+              hideTotalCount
+              theme={{
+                light: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
+                dark: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
+              }}
+              transformData={(contributions) => {
+                const threeMonthsAgo = new Date();
 
-              threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
+                threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
 
-              return contributions.filter(
-                (day) => new Date(day.date) >= threeMonthsAgo,
-              );
-            }}
-          />
-          <div className="github-activity">
-            {activity.length === 0 ? (
-              <p>No recent public GitHub activity found.</p>
-            ) : (
-              <ul>
-                {activity.map((event) => (
-                  <li key={event.id}>
-                    <strong>{event.type}</strong>
+                return contributions.filter(
+                  (day) => new Date(day.date) >= threeMonthsAgo,
+                );
+              }}
+            />
 
-                    {" in "}
-
-                    <span>{event.repo.name}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
+            <div className="github-activity">
+              {activity.length === 0 ? (
+                <p>No recent public GitHub activity found.</p>
+              ) : (
+                <ul>
+                  {activity.map((event) => (
+                    <li key={event.id}>
+                      <span>{event.type}</span> in {event.repo.name}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
         </Card>
       )}

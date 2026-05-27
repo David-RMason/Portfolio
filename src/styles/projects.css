@@ -13,6 +13,21 @@
   gap: 1rem;
 }
 
+.pf-projects-activity-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.pf-projects-activity-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pf-projects-activity-content span {
+  font-weight: 600;
+}
+
 .pf-projects-activity-wrapper {
   grid-area: activity;
 }
