@@ -34,7 +34,7 @@ export default function ContactCard({ className = "pf-contact-links" }) {
         </Button>
         <Button
           className="-tertiary-bg"
-          href="/assets/David Mason CV.pdf"
+          href={`${process.env.PUBLIC_URL}/assets/David Mason CV.pdf`}
           download="David Mason CV.pdf"
         >
           <FaFileDownload /> Download my CV
