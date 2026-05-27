@@ -1,0 +1,21 @@
+.pf-projects-group-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  @media screen and (min-width: 587px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pf-project-container.-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.pf-project-image {
+  width: 100%;
+}
+
+.pf-project-content {
+  padding: 1rem;
+}

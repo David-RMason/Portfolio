@@ -23,12 +23,6 @@ a {
   border: 1px solid var(--border);
 }
 
-.-card:has(.pf-card-background-image) {
-  background-color: transparent;
-  overflow: hidden;
-  position: relative;
-}
-
 .pf-card-background-image {
   position: absolute;
   width: 100%;

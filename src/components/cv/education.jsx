@@ -11,15 +11,15 @@ export default function Education() {
         Education
       </h2>
 
-      {education.map((item) => (
-        <article>
+      {education.map(({ qualification, detail, institution, dates }) => (
+        <article key={qualification}>
           <h3>
-            {item.qualification} | {item.detail}
+            {qualification} | {detail}
           </h3>
           <p>
-            <strong>{item.institution}</strong>
+            <strong>{institution}</strong>
           </p>
-          <p>{item.dates}</p>
+          <p>{dates}</p>
         </article>
       ))}
     </Card>

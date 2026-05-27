@@ -7,8 +7,11 @@
   background-color: var(--card-background-color);
   overflow: hidden;
   margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .pf-profile-picture-image {
+  position: absolute;
   height: 100%;
+  left: -0.5rem;
 }

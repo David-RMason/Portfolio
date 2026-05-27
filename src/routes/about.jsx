@@ -1,12 +1,13 @@
 import Card from "../components/shared/card";
-import profileImage from "../assets/DavidMason.png";
+import PageTransition from "../components/shared/pageTransition";
+import profileImage from "../assets/DavidMason.webp";
 
 import { coreProficiencies } from "../data/aboutData";
 import "../styles/about.css";
 
 export default function About() {
   return (
-    <main className="pf-about-container">
+    <PageTransition className="pf-about-container">
       <Card as="section" className="pf-about-me">
         <h2>About Me</h2>
         <p>
@@ -47,6 +48,6 @@ export default function About() {
           </Card>
         ))}
       </section>
-    </main>
+    </PageTransition>
   );
 }

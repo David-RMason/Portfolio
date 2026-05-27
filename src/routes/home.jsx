@@ -1,34 +1,38 @@
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Card from "../components/shared/card";
+import PageTransition from "../components/shared/pageTransition";
 
 import "../styles/home.css";
 
 import ProfilePicture from "../components/profilePicture";
-import BackgroundImage from "../assets/backgroundImage.jpg";
+import BackgroundImage from "../assets/backgroundImage.webp";
 
 export default function Home() {
   return (
-    <main className="pg-home-wrapper">
-      <Card className="pf-intro">
-        <div className="pf-intro-top">
-          <ProfilePicture />
-          <p className="pf-availability">Open to new opportunities</p>
-        </div>
-        <div className="pf-intro-about-me">
-          <h2>Hi! I'm David</h2>
-          <p>
-            I’m a Birmingham-based web developer with experience building custom
-            WordPress websites and React applications for businesses and
-            clients. I’m passionate about creating accessible, high-performing
-            web experiences with clean code, responsive design, and a strong
-            attention to detail.
-          </p>
-        </div>
+    <PageTransition className="pg-home-wrapper">
+      <Card as="section" className="pf-intro">
         <img
           src={BackgroundImage}
           className="pf-card-background-image"
           alt=""
         />
+        <div className=".pf-intro-blur" />
+        <div className="pf-intro-content">
+          <div className="pf-intro-top">
+            <ProfilePicture />
+            <p className="pf-availability">Open to new opportunities</p>
+          </div>
+          <div className="pf-intro-about-me">
+            <h2>Hi! I'm David</h2>
+            <p>
+              I’m a Birmingham-based web developer with experience building
+              custom WordPress websites and React applications for businesses
+              and clients. I’m passionate about creating accessible,
+              high-performing web experiences with clean code, responsive
+              design, and a strong attention to detail.
+            </p>
+          </div>
+        </div>
       </Card>
       <Card as="section" className="pf-contact-links">
         <h2>Connect with me</h2>
@@ -61,6 +65,6 @@ export default function Home() {
           <li className="pf-tech-stack-item">Bootstrap</li>
         </ul>
       </Card>
-    </main>
+    </PageTransition>
   );
 }

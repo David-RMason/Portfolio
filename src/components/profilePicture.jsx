@@ -1,5 +1,5 @@
 import "../styles/profilePicture.css";
-import profileImage from "../assets/DavidMasonSquare.png";
+import profileImage from "../assets/DavidMasonSquare.webp";
 
 export default function ProfilePicture() {
   return (

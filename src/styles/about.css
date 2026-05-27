@@ -17,8 +17,12 @@
 .pf-about-image.-card {
   grid-area: image;
   overflow: hidden;
-  padding: 0;
+  padding: 1rem;
   margin: 0;
+
+  @media screen and (min-width: 587px) {
+    padding: 0;
+  }
 }
 
 .pf-about-image img {
@@ -29,6 +33,7 @@
   min-width: 100%;
   width: 100%;
   background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
 }
 
 .pf-about-values {

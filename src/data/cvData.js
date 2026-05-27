@@ -4,10 +4,10 @@ export const workExperience = [
     company: "Super Digital",
     dates: "02/2025 - 03/2026",
     achievements: [
-      "Technical Impact: Led the transition from HTTP/2 to HTTP/3, reducing average page load times up to 50%.",
-      "Development: Designed and built responsive WordPress sites using custom themes and PHP, ensuring clean, maintainable code.",
-      "Quality & Standards: Implemented mobile-first principles and semantic HTML across all projects, consistently meeting WCAG 2.1 AA accessibility standards to boost SEO and usability.",
-      "Issue Resolution: Diagnosed and resolved cross-browser compatibility and performance issues, improving site stability across the agency’s SME client base.",
+      "Led the transition from HTTP/2 to HTTP/3, reducing average page load times up to 50%.",
+      "Designed and built responsive WordPress sites using custom themes and PHP, ensuring clean, maintainable code.",
+      "Implemented mobile-first principles and semantic HTML across all projects, consistently meeting WCAG 2.1 AA accessibility standards to boost SEO and usability.",
+      "Diagnosed and resolved cross-browser compatibility and performance issues, improving site stability across the agency’s SME client base.",
     ],
   },
   {
@@ -15,9 +15,9 @@ export const workExperience = [
     company: "Freelance",
     dates: "07/2023 - Present",
     achievements: [
-      "React Project:Designed and developed a custom landing page for a Birmingham based educational training business using React, TypeScript, and Sass, deployed via Netlify.",
-      "Maintenance: Manages ongoing updates for a Rome-based editing company, handling WordPress theme maintenance and minor CSS customizations.",
-      "Client Management: Manages the full project lifecycle, from initial requirement, wireframing to final delivery and hosting.",
+      "Designed and developed a custom landing page for a Birmingham based educational training business using React, TypeScript, and Sass, deployed via Netlify.",
+      "Manages ongoing updates for a Rome-based editing company, handling WordPress theme maintenance and minor CSS customizations.",
+      "Manages the full project lifecycle, from initial requirement, wireframing to final delivery and hosting.",
     ],
   },
   {
@@ -33,7 +33,7 @@ export const workExperience = [
 
 export const education = [
   {
-    qualification: "Geograpgy BA",
+    qualification: "Geography BA",
     detail: "2:1",
     institution: "Staffordshire University",
     dates: "2011 - 2014",

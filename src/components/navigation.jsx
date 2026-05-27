@@ -32,7 +32,6 @@ export default function Navigation() {
 
   return (
     <nav className="pf-nav-container -card" aria-label="Primary">
-      {/* Mobile nav */}
       <div className="pf-mobile-wrapper">
         <div className="pf-mobile-nav">
           {currentRoute && (
@@ -79,7 +78,6 @@ export default function Navigation() {
         </AnimatePresence>
       </div>
 
-      {/* Desktop nav */}
       <div className="pf-desktop-links">
         <NavigationLinks />
       </div>
