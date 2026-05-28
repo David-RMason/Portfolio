@@ -36,17 +36,12 @@ A modern, interactive portfolio website built with **React** showcasing projects
 
 ### Installation
 
+#### Install dependencies
 ```bash
-# Clone the repository
-git clone https://github.com/David-RMason/Portfolio.git
-
-# Navigate to project directory
-cd Portfolio
-
-# Install dependencies
 npm install
-
-# Start the development server
+```
+#### Start the development server
+```bash
 npm start
 ```
 
