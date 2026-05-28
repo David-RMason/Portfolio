@@ -21,7 +21,6 @@ A modern, interactive portfolio website built with **React** showcasing projects
 | **Animation** | Framer Motion 12.38.0 |
 | **Icons** | React Icons 5.6.0 |
 | **Styling** | CSS3 |
-| **Testing** | Jest + React Testing Library |
 | **Build Tool** | Create React App |
 | **Deployment** | GitHub Pages |
 
