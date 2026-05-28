@@ -7,8 +7,11 @@ export default function CvDownload() {
     <Card className="pf-cv-intro-container">
       <div>
         <h2>David Mason</h2>
-        <h3>Junior Web Developer</h3>
-        <p>Birmingham</p>
+        <h3>Frontend Developer</h3>
+        <p>
+          Creating Responsive, Accessible Websites | WordPress, React |
+          Birmingham
+        </p>
       </div>
       <Button
         className="-tertiary-bg"

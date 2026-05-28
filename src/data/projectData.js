@@ -44,3 +44,38 @@ export const projects = [
     featured: true,
   },
 ];
+
+export const professionalWork = [
+  {
+    name: "ActEd.",
+    image: "",
+    employer: "Freelance",
+    employerLink: null,
+    link: "https://actedutrain.com/",
+    description: "",
+  },
+  {
+    name: "Alconex",
+    image: "",
+    employer: "Super Digital",
+    employerLink: "https://wearesuper.digital/",
+    link: "https://alconex.co.uk",
+    description: "",
+  },
+  {
+    name: "ZebraPR",
+    image: "",
+    employer: "Super Digital",
+    employerLink: "https://wearesuper.digital/",
+    link: "https://zebrapr.co.uk/",
+    description: "",
+  },
+  {
+    name: "Grammatology",
+    image: "",
+    employer: "Super Digital",
+    employerLink: "https://wearesuper.digital/",
+    link: "https://grammatology.uk/",
+    description: "",
+  },
+];
