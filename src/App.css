@@ -1,15 +1,6 @@
 main {
-  display: grid;
-  gap: 1rem;
-  margin: 1rem auto;
   transition: margin 0.5s ease-in-out;
   justify-content: center;
-}
-
-@media screen and (min-width: 587px) {
-  main {
-    margin: 2rem auto;
-  }
 }
 
 a {
@@ -49,9 +40,10 @@ a {
 .pf-button {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
   background-color: transparent;
-  color: var(--header-color);
+  color: var(--tertiary);
+  border: 0;
   border-radius: var(--border-radius);
   text-decoration: none;
   font-size: 1rem;
@@ -64,29 +56,49 @@ a {
 }
 
 .pf-button:hover {
-  background-color: var(--tertiary-color);
-  color: var(--card-background-color);
+  background-color: var(--quaternary);
+  color: var(--background);
+  cursor: pointer;
 }
 
 .pf-button.active {
-  background-color: var(--primary-color);
-  color: var(--card-background-color);
+  background-color: var(--primary);
+  color: var(--background);
 }
 
-.pf-availability {
-  color: var(--card-background-color);
-  background-color: var(--tertiary-color);
-  border-radius: 25px;
-  width: max-content;
-  padding: 0.25rem 0.75rem;
-  font-weight: 500;
+.pf-button.-primary-button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
-.-tertiary-bg {
-  background-color: var(--tertiary-color);
-  color: var(--card-background-color);
+.pf-button.-primary-button:hover {
+  background-color: var(--primary-muted);
 }
 
-.pf-button.-tertiary-bg:hover {
-  background-color: var(--primary-color);
+.pf-button.-white-button {
+  background-color: var(--card);
+}
+
+.pf-button.-white-button:hover {
+  background-color: var(--secondary);
+  color: var(--foreground);
+}
+
+.-quaternary-bg {
+  background-color: var(--quaternary);
+  color: var(--background);
+}
+
+.pf-button.-quaternary-bg:hover {
+  background-color: var(--primary);
+}
+
+.pf-button:disabled {
+  background-color: var(--muted);
+  cursor: not-allowed;
+}
+
+.pf-button:disabled:hover {
+  background-color: var(--muted);
+  cursor: not-allowed;
 }

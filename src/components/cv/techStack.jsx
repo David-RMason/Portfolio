@@ -2,7 +2,6 @@ import Card from "../shared/card";
 import { FaCode } from "react-icons/fa";
 
 import { techStack } from "../../data/cvData";
-import "../../styles/techStackLists.css";
 
 export default function TechStack() {
   return (

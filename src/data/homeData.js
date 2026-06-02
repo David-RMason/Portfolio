@@ -1,3 +1,5 @@
+import { FaCode, FaServer, FaPaintBrush, FaTools } from "react-icons/fa";
+
 export const homepageInfo = {
   headline:
     "Frontend Developer | Creating Responsive, Accessible Websites | WordPress, React | Birmingham",
@@ -6,34 +8,54 @@ export const homepageInfo = {
   techStack: [
     {
       title: "Frontend",
+      icon: FaCode,
       items: [
         "React",
+        "Next.js",
         "TypeScript",
         "JavaScript",
-        "Next.js",
-        "HTML",
-        "CSS",
-        "SCSS",
+        "React Router",
+        "Component-Based Architecture",
       ],
     },
 
     {
-      title: "CMS & E-Commerce",
-      items: ["WordPress", "WooCommerce"],
+      title: "Design",
+      icon: FaPaintBrush,
+      items: [
+        "HTML",
+        "CSS",
+        "SCSS",
+        "Bootstrap",
+        "Responsive Design",
+        "Accessibility",
+      ],
     },
 
     {
-      title: "Tooling & Workflow",
-      items: ["Git", "React Router", "Bootstrap"],
+      title: "Backend",
+      icon: FaServer,
+      items: [
+        "WordPress",
+        "WooCommerce",
+        "PHP",
+        "REST APIs",
+        "SQL",
+        "Serverless Functions",
+      ],
     },
 
     {
-      title: "Backend & APIs",
-      items: ["REST APIs", "SQL", "Redis", "Serverless Functions"],
-    },
-    {
-      title: "Practices",
-      items: ["Accessibility", "Responsive Design", "Performance Optimisation"],
+      title: "Workflow",
+      icon: FaTools,
+      items: [
+        "Git",
+        "GitHub",
+        "Netlify",
+        "Redis",
+        "Performance Optimisation",
+        "Figma",
+      ],
     },
   ],
 };

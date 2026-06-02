@@ -1,4 +1,3 @@
-import PageTransition from "../components/shared/pageTransition";
 import CvDownload from "../components/cv/cvDownload";
 import ProfessionalSummary from "../components/cv/professionalSummary";
 import WorkExperience from "../components/cv/workExperience";
@@ -9,12 +8,12 @@ import "../styles/cv.css";
 
 export default function CV() {
   return (
-    <PageTransition className="pf-cv-container">
+    <main className="pf-cv-container">
       <CvDownload />
       <ProfessionalSummary />
       <WorkExperience />
       <Education />
       <TechStack />
-    </PageTransition>
+    </main>
   );
 }

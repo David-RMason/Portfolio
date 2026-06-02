@@ -1,33 +1,35 @@
 :root {
-  --primary-color: #a26139;
-  --secondary-color: #e8dfd4;
-  --tertiary-color: #537f56;
-  --accent: #f3ffca;
-  --header-color: #775845;
-  --header-color_old: #2d2520;
+  --background: #faf8f5;
+  --foreground: #2d2420;
+  --card: #ffffff;
+  --primary: #bd592e;
+  --primary-foreground: #ffffff;
+  --primary-muted: #bd592ee6;
+  --secondary: #f4e8dd;
+  --tertiary: #775845;
+  --quaternary: #537f56;
   --paragraph-color: #7a6f65;
-  --background-color: #faf8f5;
-  --card-background-color: #fefdfb;
-  --border: #8b6f4726;
+  --muted: #f0ebe5;
+  --muted-foreground: #6b5e56;
+  --border: #d4764e26;
+  --input-background: #f8f3ee;
   --border-radius: 10px;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
 body {
-  background-color: var(--background-color);
+  background-color: var(--background);
   font-family:
     ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  margin: 0.5rem;
+  margin: 0;
   transition: all 0.5s ease-in-out;
-  max-width: 1440px;
   width: stretch;
   justify-self: center;
-}
-
-@media screen and (min-width: 769px) {
-  body {
-    margin: 2rem;
-  }
 }
 
 code {
@@ -42,12 +44,30 @@ h4,
 h5,
 h6,
 strong {
-  color: var(--header-color);
+  color: var(--foreground);
   display: flex;
   align-items: center;
+  font-weight: 500;
+  line-height: 1;
   gap: 0.5rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -0.025rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h4 {
+  color: var(--muted-foreground);
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
 p,
@@ -57,4 +77,21 @@ span {
   letter-spacing: 0.02rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0.5rem;
+  margin: auto;
+  transition: 0.25s ease-in-out all;
+  @media screen and (min-width: 587px) {
+    padding: 3rem 2rem;
+  }
+}
+
+section > * {
+  align-self: center;
+  max-width: 1200px;
 }

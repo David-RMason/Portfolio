@@ -1,0 +1,28 @@
+.pf-activity {
+  background-color: var(--secondary);
+}
+
+.pf-activity-wrapper {
+  background-color: var(--card);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border);
+  padding: 3rem;
+  justify-items: center;
+}
+
+.pf-activity-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-github-calendar footer {
+  display: none !important;
+}
+
+.pf-github-activity ul {
+  list-style: none;
+  padding: 0;
+}
