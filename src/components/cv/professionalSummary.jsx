@@ -2,7 +2,7 @@ import Card from "../shared/card";
 
 export default function ProfessionalSummary() {
   return (
-    <Card>
+    <Card as="section">
       <h2>Professional Summary</h2>
       <p>
         Junior Web Developer with 1+ years of professional experience building

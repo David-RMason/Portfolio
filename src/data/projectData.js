@@ -31,7 +31,7 @@ export const projects = [
     name: "Feedback App",
     image: feedbackAppImage,
     description:
-      "“A React feedback management app with CRUD operations, Context API state management, and REST API integration.",
+      "A React feedback management app with CRUD operations, Context API state management, and REST API integration.",
     techStack: [
       "React",
       "JavaScript",
@@ -47,20 +47,13 @@ export const projects = [
 
 export const professionalWork = [
   {
-    name: "ActEd.",
-    image: "",
-    employer: "Freelance",
-    employerLink: null,
-    link: "https://actedutrain.com/",
-    description: "",
-  },
-  {
     name: "Alconex",
     image: "",
     employer: "Super Digital",
     employerLink: "https://wearesuper.digital/",
     link: "https://alconex.co.uk",
-    description: "",
+    description:
+      "Corporate infrastructure website presenting multi-utility services with custom content management and responsive layouts.",
   },
   {
     name: "ZebraPR",
@@ -68,7 +61,8 @@ export const professionalWork = [
     employer: "Super Digital",
     employerLink: "https://wearesuper.digital/",
     link: "https://zebrapr.co.uk/",
-    description: "",
+    description:
+      "Marketing and PR website focused on showcasing services, case studies, and brand credibility through a modern WordPress build.",
   },
   {
     name: "Grammatology",
@@ -76,6 +70,16 @@ export const professionalWork = [
     employer: "Super Digital",
     employerLink: "https://wearesuper.digital/",
     link: "https://grammatology.uk/",
-    description: "",
+    description:
+      "Educational platform featuring bespoke content structures and scalable WordPress-based resource management.",
+  },
+  {
+    name: "Airspace FTS",
+    image: "",
+    employer: "Super Digital",
+    employerLink: "https://wearesuper.digital/",
+    link: "https://airspace-fts.com/",
+    description:
+      "Aviation training website designed to promote courses, manage enquiries, and provide a streamlined user experience.",
   },
 ];

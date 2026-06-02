@@ -1,26 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { NavLink, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-import { routes } from "../data/routes";
+import { navLinks } from "../data/routesData";
 import "../styles/navigation.css";
 
-function NavigationLinks({ onNavigate }) {
-  return routes.map(({ path, label, icon: Icon }) => (
-    <NavLink key={path} className="pf-button" to={path} onClick={onNavigate}>
-      <Icon aria-hidden="true" focusable="false" />
-      {label}
-    </NavLink>
+function NavigationList({ onNavigate }) {
+  return navLinks.map(({ path, hash, label }) => (
+    <li key={`${path}${hash}`}>
+      <Link
+        className="pf-button"
+        to={`${path}${hash ? `#${hash}` : ""}`}
+        onClick={onNavigate}
+      >
+        {label}
+      </Link>
+    </li>
   ));
 }
 
 export default function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const location = useLocation();
-
-  const currentRoute = routes.find((route) => route.path === location.pathname);
 
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
@@ -30,57 +32,62 @@ export default function Navigation() {
     setMenuOpen(false);
   }
 
-  return (
-    <nav className="pf-nav-container -card" aria-label="Primary">
-      <div className="pf-mobile-wrapper">
-        <div className="pf-mobile-nav">
-          {currentRoute && (
-            <span className="pf-current-page">
-              <currentRoute.icon aria-hidden="true" focusable="false" />
-              {currentRoute.label}
-            </span>
-          )}
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 0);
 
-          <button
-            type="button"
-            className="pf-hamburger"
-            onClick={toggleMenu}
-            aria-expanded={menuOpen}
-            aria-controls="pf-mobile-menu"
-            aria-label={
-              menuOpen ? "Close navigation menu" : "Open navigation menu"
-            }
-          >
-            {menuOpen ? (
-              <FaTimes aria-hidden="true" />
-            ) : (
-              <FaBars aria-hidden="true" />
-            )}
-          </button>
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <>
+      <nav
+        className={`pf-nav-bar${isScrolled ? " -scrolled" : ""}${
+          menuOpen ? " -open" : ""
+        }`}
+      >
+        <div className="pf-nav-icon">
+          <Link to="/" className="pf-button">
+            DM
+          </Link>
         </div>
 
-        <AnimatePresence>
-          {menuOpen && (
-            <motion.div
-              id="pf-mobile-menu"
-              className="pf-mobile-links"
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{
-                duration: 0.2,
-                ease: "easeOut",
-              }}
-            >
-              <NavigationLinks onNavigate={closeMenu} />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+        <ul className="pf-nav pf-desktop-links">
+          <NavigationList />
+        </ul>
 
-      <div className="pf-desktop-links">
-        <NavigationLinks />
-      </div>
-    </nav>
+        <button
+          type="button"
+          className="pf-hamburger"
+          onClick={toggleMenu}
+          aria-expanded={menuOpen}
+          aria-controls="pf-mobile-menu"
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
+        >
+          {menuOpen ? (
+            <FaTimes aria-hidden="true" focusable="false" />
+          ) : (
+            <FaBars aria-hidden="true" focusable="false" />
+          )}
+        </button>
+      </nav>
+
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.ul
+            id="pf-mobile-menu"
+            className="pf-nav pf-mobile-links"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+          >
+            <NavigationList onNavigate={closeMenu} />
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

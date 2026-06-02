@@ -1,0 +1,50 @@
+.pf-skills {
+  background-color: var(--secondary);
+}
+
+.pf-skills header {
+  justify-items: center;
+  text-align: center;
+}
+
+.pf-skills header p {
+  color: var(--muted-foreground);
+}
+
+.pf-tech-stack-content {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  width: 100%;
+
+  @media screen and (min-width: 587px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pf-tech-category {
+  padding: 1rem;
+  color: var(--foreground);
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+}
+
+.pf-tech-category svg {
+  padding: 0.5rem;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-radius: var(--border-radius);
+}
+
+.pf-home-tech-stack-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pf-home-tech-stack-item {
+  color: var(--muted-foreground);
+}

@@ -1,0 +1,53 @@
+.pf-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100dvh;
+  max-width: 35rem;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pf-availability {
+  color: var(--foreground);
+  background-color: var(--secondary);
+  border-radius: 25px;
+  width: max-content;
+  padding: 0.5rem 2rem;
+  font-weight: 400;
+  margin-top: 4rem;
+}
+
+.pf-hero-title {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -0.025rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.pf-hero-headline {
+  font-size: 1.25rem;
+}
+
+.pf-hero-section-buttons,
+.pf-hero-socials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.pf-hero-socials a:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.pf-hero-sentinel {
+  height: 1px;
+  width: 100%;
+  opacity: 0;
+}
