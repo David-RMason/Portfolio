@@ -12,6 +12,7 @@
   display: grid;
   gap: 1.5rem;
   max-width: 900px;
+  padding: 0 0.5rem;
   margin: 5rem auto 1rem auto;
 }
 

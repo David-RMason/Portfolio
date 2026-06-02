@@ -7,12 +7,30 @@ import { navLinks } from "../data/routesData";
 import "../styles/navigation.css";
 
 function NavigationList({ onNavigate }) {
+  function handleNavClick(path, hash, onNavigate) {
+    onNavigate?.();
+
+    const id = hash || "";
+
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const yOffset = -80;
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }, 0);
+  }
   return navLinks.map(({ path, hash, label }) => (
     <li key={`${path}${hash}`}>
       <Link
         className="pf-button"
         to={`${path}${hash ? `#${hash}` : ""}`}
-        onClick={onNavigate}
+        onClick={() => handleNavClick(path, hash, onNavigate)}
       >
         {label}
       </Link>
