@@ -121,8 +121,8 @@
 
   z-index: 20;
 }
-.pf-hamburger {
-  @media screen and (min-width: 587px) {
+@media screen and (min-width: 587px) {
+  .pf-hamburger {
     display: none;
   }
 }
