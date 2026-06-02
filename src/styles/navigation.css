@@ -120,7 +120,8 @@
   cursor: pointer;
 
   z-index: 20;
-
+}
+.pf-hamburger {
   @media screen and (min-width: 587px) {
     display: none;
   }
