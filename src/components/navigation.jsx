@@ -15,7 +15,9 @@ function NavigationList({ onNavigate }) {
     setTimeout(() => {
       const element = document.getElementById(id);
       if (element) {
-        const y = element.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -64;
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
         window.scrollTo({ top: y, behavior: "smooth" });
       } else {
