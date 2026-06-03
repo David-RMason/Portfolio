@@ -108,6 +108,10 @@ section {
   }
 }
 
+section > header {
+  display: grid;
+}
+
 section > * {
   align-self: center;
   max-width: 1200px;
