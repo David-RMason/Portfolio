@@ -11,9 +11,26 @@
   --paragraph-color: #7a6f65;
   --muted: #f0ebe5;
   --muted-foreground: #6b5e56;
+  --nav-background: rgba(255, 255, 255, 85%);
   --border: #d4764e26;
   --input-background: #f8f3ee;
   --border-radius: 10px;
+}
+
+[data-theme="dark"] {
+  --background: #15110f;
+  --foreground: #f3e8df;
+  --card: #1e1916;
+  --primary: #e07b47;
+  --secondary: #29211c;
+  --tertiary: #e2d0c2;
+  --quaternary: #84aa7f;
+  --paragraph-color: #b7a99d;
+  --muted: #241d19;
+  --muted-foreground: #98897d;
+  --nav-background: #000000d9;
+  --border: rgba(224, 123, 71, 0.12);
+  --input-background: #211b18;
 }
 
 html {

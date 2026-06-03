@@ -23,7 +23,7 @@
 
 .-scrolled {
   border-bottom: 1px solid var(--border);
-  background-color: rgba(255, 255, 255, 80%);
+  background-color: var(--nav-background);
 }
 
 .-open {
@@ -86,7 +86,7 @@
   border-bottom-right-radius: var(--border-radius);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  background-color: rgba(255, 255, 255, 80%);
+  background-color: var(--nav-background);
   border: 1px solid var(--border);
   border-top: 0px solid transparent;
   z-index: 25;

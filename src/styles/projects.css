@@ -106,6 +106,10 @@
   display: none !important;
 }
 
+.pf-github-calendar text {
+  color: var(--paragraph-color);
+}
+
 .pf-github-activity ul {
   list-style: none;
   padding: 0;

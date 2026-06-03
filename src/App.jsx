@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
+import ThemeToggle from "./components/themeToggle";
 import ScrollController from "./components/scrollController";
 import NewNav from "./components/navigation";
 import Home from "./routes/home";
@@ -11,6 +12,7 @@ import "./App.css";
 function App() {
   return (
     <>
+      <ThemeToggle />
       <ScrollController />
       <NewNav />
       <Routes>

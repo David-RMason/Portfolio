@@ -61,6 +61,10 @@
   gap: 0.5rem;
 }
 
+.pf-contact-form label {
+  color: var(--paragraph-color);
+}
+
 .pf-contact-form input,
 .pf-contact-form textarea {
   border-radius: var(--border-radius);
@@ -68,6 +72,7 @@
   border: 1px solid var(--border);
   background-color: var(--input-background);
   margin-bottom: 1rem;
+  color: var(--foreground);
 }
 
 .pf-contact-form textarea {
@@ -79,4 +84,8 @@
 .pf-contact-form button {
   width: auto;
   justify-content: center;
+}
+
+.pf-contact-form button[disabled] {
+  color: var(--muted-foreground);
 }

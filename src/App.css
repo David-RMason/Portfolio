@@ -102,3 +102,20 @@ a {
   background-color: var(--muted);
   cursor: not-allowed;
 }
+
+.pf-theme-toggle {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.pf-theme-toggle:hover {
+  transform: translateY(-0.25rem);
+}
