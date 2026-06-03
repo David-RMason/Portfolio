@@ -110,7 +110,7 @@ a {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: var(--card);
+  background: var(--nav-background);
   border: 1px solid var(--border);
   color: var(--primary);
   cursor: pointer;
