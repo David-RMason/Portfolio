@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.30954e0c.css",
-    "main.js": "/Portfolio/static/js/main.bb5d9c94.js",
+    "main.css": "/Portfolio/static/css/main.b4a6dd07.css",
+    "main.js": "/Portfolio/static/js/main.2076a460.js",
     "static/js/123.3f17b6ed.chunk.js": "/Portfolio/static/js/123.3f17b6ed.chunk.js",
     "static/media/bankistAppPreview.webp": "/Portfolio/static/media/bankistAppPreview.d4365ae16f019be4f1c7.webp",
     "static/media/feedbackAppPreview.webp": "/Portfolio/static/media/feedbackAppPreview.f72186d659b2c36d02b0.webp",
     "static/media/insertCoinPreview.webp": "/Portfolio/static/media/insertCoinPreview.34c6b89dadca9f325e64.webp",
     "index.html": "/Portfolio/index.html",
-    "main.30954e0c.css.map": "/Portfolio/static/css/main.30954e0c.css.map",
-    "main.bb5d9c94.js.map": "/Portfolio/static/js/main.bb5d9c94.js.map",
+    "main.b4a6dd07.css.map": "/Portfolio/static/css/main.b4a6dd07.css.map",
+    "main.2076a460.js.map": "/Portfolio/static/js/main.2076a460.js.map",
     "123.3f17b6ed.chunk.js.map": "/Portfolio/static/js/123.3f17b6ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.30954e0c.css",
-    "static/js/main.bb5d9c94.js"
+    "static/css/main.b4a6dd07.css",
+    "static/js/main.2076a460.js"
   ]
 }
