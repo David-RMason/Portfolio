@@ -36,7 +36,7 @@
 .pf-tech-category svg {
   padding: 0.5rem;
   background-color: var(--secondary);
-  color: var(--primary);
+  color: var(--accent);
   border-radius: var(--border-radius);
 }
 

@@ -112,7 +112,7 @@ a {
   border-radius: 50%;
   background: var(--nav-background);
   border: 1px solid var(--primary-muted);
-  color: var(--primary);
+  color: var(--accent);
   cursor: pointer;
   transition: all 0.2s ease;
 }

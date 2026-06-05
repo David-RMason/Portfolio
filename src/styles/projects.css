@@ -36,7 +36,7 @@
 }
 
 .pf-project-employer-link.pf-button {
-  color: var(--primary);
+  color: var(--accent);
   background-color: transparent;
   border-radius: 0;
   width: max-content;
